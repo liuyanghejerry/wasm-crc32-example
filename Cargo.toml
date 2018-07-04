@@ -1,0 +1,20 @@
+[package]
+name = "wasm-crc32-example"
+version = "0.1.0"
+authors = ["liuyanghejerry <liuyanghejerry@126.com>"]
+
+[dependencies]
+lazy_static = "1"
+
+[lib]
+path = "src/lib.rs"
+# path = "src/lib-shrinked.rs"
+crate-type = ["cdylib"]
+
+[features]
+default = []
+
+[profile.release]
+debug = false
+lto = true
+opt-level = 's'

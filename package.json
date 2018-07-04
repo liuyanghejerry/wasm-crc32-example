@@ -1,0 +1,36 @@
+{
+  "name": "wasm-crc32-example",
+  "version": "1.0.0",
+  "description": "Example and blog post for wasm implemented crc32",
+  "main": "crc32.js",
+  "dependencies": {
+    "arraybuffer-loader": "^1.0.4",
+    "benchmark": "^2.1.4",
+    "crc": "^3.5.0",
+    "crc-32": "^1.2.0",
+    "faster-crc32": "0.0.5",
+    "js-crc": "^0.2.0",
+    "lodash": "^4.17.10",
+    "raw-loader": "^0.5.1",
+    "sse4_crc32": "^5.2.0",
+    "webpack": "^4.12.0",
+    "webpack-command": "^0.2.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "node": "cargo +nightly build --target=wasm32-unknown-unknown --release && node index.js",
+    "browser": "cargo +nightly build --target=wasm32-unknown-unknown --release && webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liuyanghejerry/wasm-crc32-example.git"
+  },
+  "keywords": [],
+  "author": "liuyanghejerry",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/liuyanghejerry/wasm-crc32-example/issues"
+  },
+  "homepage": "https://github.com/liuyanghejerry/wasm-crc32-example"
+}
